@@ -1,0 +1,16 @@
+{
+  "name": "mern-starter",
+  "version": "1.0.0",
+  "description": "Full MERN Stack Project Starter with React and Express + MongoDB Atlas",
+  "scripts": {
+    "server": "npm run dev --prefix server",
+    "client": "npm start --prefix client",
+    "dev": "npm start --prefix client",
+    "install:server": "npm install --prefix server",
+    "install:client": "npm install --prefix client",
+    "install:all": "npm run install:server && npm run install:client"
+  },
+  "keywords": ["mern", "react", "express", "mongodb", "nodejs"],
+  "author": "",
+  "license": "ISC"
+}
