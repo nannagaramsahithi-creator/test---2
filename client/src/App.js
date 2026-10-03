@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MainLayout from './components/layout/MainLayout';
 import LandingPage from './views/LandingPage';
+import DashboardView from './views/DashboardView';
 import {
   ReportLostView,
   ReportFoundView,
@@ -17,7 +18,9 @@ function App() {
   const renderActiveView = () => {
     switch (activeNav) {
       case 'dashboard':
+        return <DashboardView onNavigate={setActiveNav} />;
       case 'home':
+      case 'landing':
         return <LandingPage onNavigate={setActiveNav} />;
       case 'report-lost':
         return <ReportLostView onNavigate={setActiveNav} />;

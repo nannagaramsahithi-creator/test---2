@@ -5,7 +5,9 @@ import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import connectDB from './config/db.js';
 import itemRoutes from './routes/itemRoutes.js';
+import lostItemRoutes from './routes/lostItemRoutes.js';
 import Item from './models/Item.js';
+import LostItem from './models/LostItem.js';
 import { notFound, errorHandler } from './middleware/errorHandler.js';
 
 // Load environment variables from .env
@@ -89,6 +91,7 @@ app.get('/api/db-verify', async (req, res) => {
 
 // API Routes
 app.use('/api/items', itemRoutes);
+app.use('/api/lost-items', lostItemRoutes);
 
 // Error Handling Middlewares
 app.use(notFound);
